@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	srand(time(0));
+	int a=rand();
+	int number;
+	int account=0;
+	int b=a%100+1;
+	printf("我生成了一个1~100的数字\n");
+	do{
+		account++;
+		printf("请猜出这个数字：");
+		scanf("%d",&number);
+		if(number<b)
+		{
+			printf("你猜的数字小了\n"); 
+		 } 
+		if(number>b)
+		 {
+		 	printf("你猜的数字大了\n"); 
+		 }
+	}while(b!=number);
+	printf("你猜中了这个数字\n");
+	printf("你一共猜了%d次\n",account);
+	printf("它是%d\n",b) ;
+	return 0;
+}
