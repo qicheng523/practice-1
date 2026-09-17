@@ -1,0 +1,23 @@
+int main()
+{
+	int number;
+	printf("请输入数字：");
+	scanf("%d",&number);
+	int a=1,b=0;
+	do{
+    a=number%10;
+    number/=10;
+	b=b*10+a;
+	}while(number>0);
+	printf("倒序数字为：%d\n",b);
+	int digit;
+	while(b>0){
+		digit=b%10;
+		printf("%d",digit);
+		if(b>9){
+			printf(" ");
+		}
+		b/=10;
+		}	
+	return 0;
+}
