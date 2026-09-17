@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+	int number;
+	printf("请输入数字：");
+	scanf("%d",&number); 
+	int a=0;
+	int back;
+	back=number;
+	for (a=0;number>0;a++){
+		number/=10;
+	}
+	number=back;
+	int b=1,c=1;
+	while(b<a){
+    	b++;
+		c*=10;
+	}
+	int digit;
+	do{
+		digit=number/c;
+		printf("%d",digit);
+		if(c>0){
+			printf(" ");
+		}
+	    number=number%c;
+		c/=10;
+	}while(c>0);
+		return 0;		 
+}
